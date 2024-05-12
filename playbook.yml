@@ -1,0 +1,14 @@
+---
+- name: Nginx & PHP
+  hosts: myservers
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    IgnatevaVA
+  roles:
+    - nginx
+    - php
